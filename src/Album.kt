@@ -7,6 +7,10 @@ class Album(val songs: List<Song>): Music {
         return playtime
     }
 
+    override fun getAllSongs(): List<Song> {
+        return songs
+    }
+
     fun filterByArtist(artist: String): List<Song> {
         return songs.filter { it.artist == artist }
     }
