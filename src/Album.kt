@@ -1,9 +1,10 @@
 class Album(val songs: List<Song>): Music {
     override fun getPlayingTime(): Double {
-        var
+        var playtime = 0.0
         for (song in songs) {
-
+            playtime += song.playingTime
         }
+        return playtime
     }
 
     fun filterByArtist(artist: String): List<Song> {
